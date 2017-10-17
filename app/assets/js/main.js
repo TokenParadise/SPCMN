@@ -154,12 +154,12 @@ $(window).resize(function() {
 window.addEventListener('load', function() {
 
 // web3 communication
-if (typeof web3 !== 'undefined') {
-  web3 = new Web3(web3.currentProvider);
-} else { 
+// if (typeof web3 !== 'undefined') {
+//  web3 = new Web3(web3.currentProvider);
+/* } else { 
   // set the provider you want from Web3.providers
   web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.01:8545"));
-}
+} */
 
 
 // var coinbase = web3.eth.accounts[0];
