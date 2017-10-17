@@ -1,0 +1,22 @@
+# Site settings
+title: SPECUMANIA
+description: THE SPECULATIVE TOKEN
+#baseurl: "/cointest.github.io" 
+#url: "https://tokenparadise.github.io" 
+baseurl:
+url: http://localhost:3000
+
+# User settings
+username: SPCMN
+user_description: We issue this token just to be part of the current ICO bubble. It's not just surfing the hype - it's also research. We are up to write a paper on "The Alt Token Bubble". Seriously.
+user_title: SPCMN
+email: nomail@nomail.com
+twitter_username: bubbletoken
+github_username:  TokenParadise
+gplus_username:  
+  
+# Google-analytics
+google-analytics:
+  id: ""
+
+exclude: ['package.json', 'src' , 'node_modules']

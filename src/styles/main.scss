@@ -1,0 +1,713 @@
+$main: #1a222c;
+$sec: #4B5664;
+$purple: #54516A;
+$cut: 768px;
+$container: white ;
+$icon: #41484b;
+// Button
+$reddish : #aaa;
+$redder :  #449b3e;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        opacity: .4;
+        top: 0;
+    }
+    50% {
+        -ms-filter: none;
+        -webkit-filter: none;
+        filter: none;
+        opacity: 1;
+        top: -10px;
+    }
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        opacity: .4;
+        top: 0;
+    }
+}
+
+@keyframes pulse {
+    from {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        opacity: .4;
+        top: 0
+    }
+    50% {
+        -ms-filter: none;
+        -webkit-filter: none;
+        filter: none;
+        opacity: 1;
+        top: -10px
+    }
+    to {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        opacity: .4;
+        top: 0
+    }
+}
+
+#particles-js {
+  background: $main;
+  display: block;
+  vertical-align: bottom;
+  width: 100vw;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  .particles-js-canvas-el {
+    width:100vw !important;
+    height:100vh !important;
+  }
+}
+
+.content {
+  z-index: 1;
+  text-align: center;
+  color:#FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  .site-title {
+    font-size: 50px;
+    display: block;
+    line-height: 1;
+    @media only screen and (min-width:$cut){
+      margin: 0;
+      font-size: 100px;
+    }
+  }
+  .site-description {
+    font-size: 20px;
+    display: block;
+    line-height: 1;
+    margin: 5px 0 10px 0;
+    @media only screen and (min-width:$cut){
+      font-size: 29px;
+    }
+  }
+  .link {
+    color: #b74a2d;
+    display: inline-flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 0 10px 10px 10px;
+    @media only screen and (min-width:$cut){
+      font-size: 20px;
+    }
+  }
+}
+
+.icons-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .icon {
+    text-align: center;
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 14px;
+    margin: 2px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    transition: all .7s;
+    &:hover {
+      color: $main;
+      background: #FFF;
+    }
+    &:active {
+      color: $main;
+      background: #FFF;
+    }
+    @media only screen and (min-width:$cut) {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+    }
+  }
+}
+
+.down {
+  color: #FFF;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  .icon {
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      fill: #fff;
+      -webkit-animation: pulse 1.3s infinite;
+      animation: pulse 1.3s infinite;
+      &:hover {
+        color: $sec;
+      }
+      &:active {
+        color: $sec;
+      }
+  }
+}
+
+.user {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 60px;
+  p {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: $cut) {
+    font-size: 75px;
+  }
+}
+
+.user-details {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px auto;
+}
+
+.borderdashed{
+  border-bottom: 1px dashed $icon;
+  border-radius: 30px;
+  padding: 20px;
+  color: $icon;
+  text-align: center;
+}
+
+.user-projects {
+  margin: 40px auto;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  h5 {
+    margin: 0;
+  }
+  li {
+    color: $main;
+    font-size: 1.1rem;
+  }
+  p {
+    margin-right: 5px;
+  }
+}
+
+.images {
+  @media only screen and (min-width: $cut) {
+    float: right;
+  }
+}
+
+.project-link {
+  // display: block;
+  width: 100px;
+  margin: 10px 0px;
+  padding: 5px;
+  color: $main;
+  background-color: transparent;
+  border: 1px solid $main;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease-out,
+              background-color 0.3s ease-out,
+              border-color 0.3s ease-out;
+  &:hover {
+    background-color: $purple;
+    border-color: $purple;
+    color: #fff;
+    transition: color 0.3s ease-in,
+                background-color 0.3s ease-in,
+                border-color 0.3s ease-in;
+  }
+  &:active {
+    background-color: $purple;
+    border-color: $purple;
+    color: #fff;
+    transition: color 0.3s ease-in,
+                background-color 0.3s ease-in,
+                border-color 0.3s ease-in;
+  }
+}
+
+.footer {
+  background: $main;
+  padding: 10px 0;
+  margin-top: 100px;
+  text-align: center;
+  color: #FFF;
+  .love {
+    color: red;
+  }
+  a {
+    text-decoration: none;
+    margin: 0;
+    color: #FFF;
+    &:hover{
+      color: $sec;
+    }
+    &:active {
+      color: $sec;
+    }
+  }
+}
+
+
+// copy paste button
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin pos-center {
+  // position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.containerBox {
+  @include flex-center;
+  @include pos-center;
+  width: 92%;
+  height: 115px;
+  max-width: 210px;
+  padding: 0 10px;
+  background: $container;
+  border-radius: 10px;
+  // box-shadow: rgba(black, 0.25) 0 16px 36px;
+  transform: translate3d(0, 0, 0);
+}
+
+.containerBox > button {
+  position: relative;
+  display: block;
+  width: 40%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 99;
+  outline: none;
+  backface-visibility: hidden;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  > div {
+    @include pos-center;
+  }
+}
+
+// Copy!
+.copy {
+  &.is-active {
+    .bottom {
+      animation: copy 0.8s ease-out;
+    }
+  }
+  .top,
+  .bottom {
+    background: $container;
+    top: -8px;
+    left: 6px;
+  }
+  .top {
+    width: 29px;
+    height: 34px;
+    border-top: 4px solid $icon;
+    border-left: 4px solid $icon;
+    border-radius: 4px 0;
+    position: absolute;
+  }
+  .bottom {
+    width: 32px;
+    height: 38px;
+    border: 4px solid $icon;
+    border-radius: 4px;
+    transform: translate(9px, 10px);
+  }
+}
+
+.copy:hover {
+  &.is-active {
+    .bottom {
+      animation: copy 0.8s ease-out;
+    }
+  }
+  .top,
+  .bottom {
+    background: $container;
+    top: -8px;
+    left: 6px;
+  }
+  .top {
+    width: 29px;
+    height: 34px;
+    border-top: 4px solid $redder;
+    border-left: 4px solid $redder;
+    border-radius: 4px 0;
+    position: absolute;
+  }
+  .bottom {
+    width: 32px;
+    height: 38px;
+    border: 4px solid $redder;
+    border-radius: 4px;
+    transform: translate(9px, 10px);
+  }
+}
+
+// Share!
+.share {
+  &.is-active {
+    .line:nth-child(2) {
+      &:before {
+        animation: share-top 0.8s linear;
+      }
+    }
+    .line:nth-child(3) {
+      &:before {
+        animation: share-bottom 0.8s linear;
+      }
+    }
+  }
+  .circles {
+    position: absolute;
+    @include pos-center;
+    right: 26px;
+    width: 12px;
+    height: 12px;
+    background: $icon;
+    border-radius: 100%;
+    &:before,
+    &:after {
+      content: "";
+      @include pos-center;
+      width: 12px;
+      height: 12px;
+      background: $icon;
+      border-radius: 100%;
+    }
+    &:before {
+      position: absolute;
+      top: -28px;
+      left: 26px;
+    }
+    &:after {
+      position: absolute;
+      bottom: -28px;
+      left: 26px;
+    }
+  }
+  .line {
+    position: absolute;
+    @include pos-center;
+    width: 36px;
+    height: 3px;
+    background: $icon;
+    overflow: hidden;
+    &:nth-child(2) {
+      bottom: 14px;
+      transform: rotate(-30deg);
+    }
+    &:nth-child(3) {
+      top: 15px;
+      transform: rotate(30deg);
+    }
+    &:before {
+      content: "";
+      @include pos-center;
+      width: 100%;
+      height: 100%;
+      background: $icon;
+      transform-origin: 50%;
+    }
+  }
+}
+
+
+.share:hover{
+  &.is-active {
+    .line:nth-child(2) {
+      &:before {
+        animation: share-top 0.8s linear;
+      }
+    }
+    .line:nth-child(3) {
+      &:before {
+        animation: share-bottom 0.8s linear;
+      }
+    }
+  }
+  .circles {
+    position: absolute;
+    @include pos-center;
+    right: 26px;
+    width: 12px;
+    height: 12px;
+    background: $redder;
+    border-radius: 100%;
+    &:before,
+    &:after {
+      content: "";
+      @include pos-center;
+      width: 12px;
+      height: 12px;
+      background: $redder;
+      border-radius: 100%;
+    }
+    &:before {
+      position: absolute;
+      top: -28px;
+      left: 26px;
+    }
+    &:after {
+      position: absolute;
+      bottom: -28px;
+      left: 26px;
+    }
+  }
+  .line {
+    position: absolute;
+    @include pos-center;
+    width: 36px;
+    height: 3px;
+    background: $redder;
+    overflow: hidden;
+    &:nth-child(2) {
+      bottom: 14px;
+      transform: rotate(-30deg);
+    }
+    &:nth-child(3) {
+      top: 15px;
+      transform: rotate(30deg);
+    }
+    &:before {
+      content: "";
+      @include pos-center;
+      width: 100%;
+      height: 100%;
+      background: $redder;
+      transform-origin: 50%;
+    }
+  }
+}
+
+// Copy!
+@keyframes copy {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(9px, 10px);
+  }
+}
+
+// Share!
+@keyframes share-top {
+  0% {
+    transform: translate(100%, 0);
+  }
+  40%,
+  41% {
+    transform: translate(-100%, 0);
+  }
+  41% {
+    transform: translate(100%, 0);
+  }
+  80%,
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes share-bottom {
+  0%,
+  10% {
+    transform: translate(-100%, 0);
+  }
+  50%,
+  51% {
+    transform: translate(100%, 0);
+  }
+  51% {
+    transform: translate(-100%, 0);
+  }
+  90%,
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+// progress bar
+// @import "compass/css3";
+
+.progress {
+  width: 100%;
+  height: 50px;
+}
+
+.progress-wrap {
+  background: #449b3e;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  .progress-bar {
+    background: #aaa;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.fullCol{
+  border: 1px dashed $icon;
+  text-align:center;
+  padding: 30px 0 0 0;
+  border-radius: 30px;
+  color: $icon;
+}
+
+#progressDiv{
+  text-align: center;
+  margin: 0 0 100px 0;
+  color: $icon;
+    .endProgress{
+      float: right;
+      border-right: 1px solid $icon;
+      padding: 10px;
+      margin: -10px 0 0 0;
+    }
+    .startProgress{
+      float: left;
+      border-left: 1px solid $icon;
+      padding: 10px;
+      margin: -10px 0 0 0;
+    }
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.flat-button {
+  position: relative;
+  width: 250px; height: 60px;
+  background: $reddish;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color .3s;
+  /* Typo */
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.flat-button:after {
+  position: absolute;
+  top: 90%; left: 0;
+  width: 100%; height: 100%;
+  background: $redder;
+  content: "";
+  z-index: -2;
+  transition: transform .3s;
+}
+
+.flat-button:hover::after {
+  transform: translateY(-80%);
+  transition: transform .3s;
+}
+
+
+// Send ether field
+// //** variables
+$background: #aaa;
+$text: #aaa;
+$input-bg-color: #aaa;
+$input-text-color: #aaa;
+$button-bg-color: #aaa;
+$button-text-color: #aaa;
+
+
+//** helper
+.containerEtherSend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $text;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container__item{
+  text-align: center;
+}
+
+//** form
+.form { 
+  &__field {
+    width: 210px;
+    background: #fff;
+    color: $input-text-color;
+    font: inherit;
+    border: 2px dashed #aaa;
+    outline: 0;
+    padding: 22px 18px 0 18px;
+    margin: 0 !important;
+  }
+    margin: 0 !important;
+}
+
+input[type=text]{
+    box-sizing: content-box !important; 
+    font-size: 1.5em;
+    padding: 6px 20px;
+}
+input[type=text]:focus{
+    box-sizing: content-box !important; 
+    border: 1px solid $redder;
+}
